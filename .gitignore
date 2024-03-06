@@ -1,0 +1,23 @@
+# Folders
+Logs/*
+%allure_result_folder%/
+
+#PyCharm Core
+.idea
+
+# temp files
+*.tmp
+
+# OS Generated files
+.DS_Store
+.DS_Store?
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
