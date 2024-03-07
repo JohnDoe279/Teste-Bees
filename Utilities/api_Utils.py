@@ -8,7 +8,6 @@ log = Logger(__name__, logging.INFO)
 
 class API_Utils:
     api_url = configReader.readConfig("api info", "api_url")
-    # global response
 
     def get_api(self):
         api_base_url = self.api_url
