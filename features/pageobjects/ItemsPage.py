@@ -20,10 +20,6 @@ class ItemsPage(BasePage):
         "items_table": (By.XPATH, "//*[@id='items']/table/tbody"),
         "new_item_creation_success_msg": (By.XPATH, "//p[normalize-space()='Item was successfully created.']"),
         "destroy_this_item_btn": (By.XPATH, "")
-
-
-
-
     }
 
     def click_new_item(self):
@@ -63,7 +59,7 @@ class ItemsPage(BasePage):
         # search for an item in the lines
         for row_data in rows_data:
             if item_data in row_data:
-                # If it finds the item clicks on 'Show this deposit'
+                # If it finds the item clicks on 'Show this item'
                 self.finds_item_and_click(
                     self.locators["deposits_table"], rows_data.index(row_data))
                 return
