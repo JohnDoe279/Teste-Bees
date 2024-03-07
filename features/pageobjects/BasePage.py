@@ -28,7 +28,6 @@ class BasePage:
         self.driver.find_element(*locator).send_keys(text)
 
     def click_element(self, locator):
-        # self.wait_for_element_visibility(locator)
         self.driver.find_element(*locator).click()
 
     def wait_for_element_visibility(self, locator, timeout=10):
@@ -91,14 +90,10 @@ class BasePage:
         columns = row.find_elements(By.TAG_NAME, "td")
 
         for column in columns:
-            # Verifica se o texto do item é "Show this deposit" ou "Show this item"
             if column.text.strip() in ["Show this deposit", "Show this item"]:
                 column.click()
-                return  # Termina a função após clicar no item
+                return  
 
-        # Se o item não for encontrado em nenhuma coluna
         raise NoSuchElementException("Item not found in any column")
 
-    # log.logger.info("Clicking on an element: " + str(locator))
-    # log.logger.info("Typing in an element: " + str(locator) + " value entered as : " + str(value))
-    # log.logger.info("Selecting from an element: " + str(locator) + " value selected as : " + str(value))
+
