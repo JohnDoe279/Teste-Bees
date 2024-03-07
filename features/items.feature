@@ -39,6 +39,6 @@ Background:
 
   @items
   Scenario: Delete Item
-    When I click on "DS-Item_1" to show the item data
+    When I click on "New-Item_1" to show the item data
     And I click to destroy the item
-    Then I do not see "New-DS-Depo1" item in items list
+    Then I do not see "New-Item_1" item in items list
